@@ -127,7 +127,7 @@ module Exchange
       def rate from, to, opts={}
         rate = cache.cached(self.class, opts.merge(:key_for => [from, to])) do
           update(opts)
-          
+
           rate_from   = rates[from]
           rate_to     = rates[to]
           
